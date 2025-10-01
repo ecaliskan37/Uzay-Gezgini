@@ -37,7 +37,7 @@ export default function App() {
 
   useEffect(() => {
     if (timerRunning && timeLeft > 0) {
-      id.value = setInterval(() => setTimeLeft(p => p - 1), 200)
+      id.value = setInterval(() => setTimeLeft(p => p - 1), 1000)
       return () => clearInterval(id.value)
     }
   }, [timerRunning, timeLeft])
